@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="2nd T20 . Windies tour of Bangladesh,2018"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                >
+                <LinearLayout
+                    android:id="@+id/row1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_action_image"
+                        >
+                    </ImageView>
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:id="@+id/team1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="BAN"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:paddingLeft="100dp"
+                        android:paddingTop="3dp"
+                        android:id="@+id/score1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="211-4 (20)"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row2"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row1"
+                    >
+
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_action_image"
+                        >
+                    </ImageView>
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:id="@+id/team2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="ENG"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:paddingLeft="100dp"
+                        android:paddingTop="3dp"
+                        android:id="@+id/score2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="175 (19.2)"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/contentTextView"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="italic"
+                android:text="Bangladesh won by 36 runs"
+                android:paddingBottom="20dp"
+                />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="bottom"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bwhite"
+            android:text="SCHEDULE"
+            android:layout_margin="0dp"
+            android:paddingLeft="200dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="bottom"
+            />
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

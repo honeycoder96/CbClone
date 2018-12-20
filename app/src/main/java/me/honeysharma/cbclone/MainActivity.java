@@ -1,10 +1,14 @@
 package me.honeysharma.cbclone;
 
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,6 +61,27 @@ public class MainActivity extends AppCompatActivity {
         lv1=(ListView)findViewById(R.id.idListView1);
         NewsAdapter adapter1=new NewsAdapter(getApplicationContext(),news1,heading,img);
         lv1.setAdapter(adapter1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId())
+        {
+            case R.id.setting:
+                Intent settingsIntent=new Intent(this,Settings.class);
+                startActivity(settingsIntent);
+                break;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }
 

@@ -1,9 +1,420 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="THEME"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/dt"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Dark Theme"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Light text agains dark background"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:layout_below="@id/dt"
+                />
+            <Switch
+                android:id="@+id/idswitch"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="DATA SAVER OPTIONS"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/adr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Automatic Data Referesh"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Light text agains dark background"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/adr"
+                />
+
+            <Switch
+                android:id="@+id/idswitch1"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick1"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/wblack"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/lm"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Load Images"
+                android:paddingTop="10dp"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/adu"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Affects data usage"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/lm"
+                />
+
+            <Switch
+                android:id="@+id/idswitch2"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick2"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="NOTIFICATIONS"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:paddingTop="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/idswitch2"/>
+
+
+            <TextView
+                android:id="@+id/allow"
+                android:layout_below="@id/notification"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Allow Notification"
+                android:textSize="15dp"
+                />
+
+
+            <Switch
+                android:id="@+id/idswitch3"
+                android:layout_below="@id/notification"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick3"
+                />
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_below="@id/idswitch3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+
+            <TextView
+                android:id="@+id/sound"
+                android:layout_below="@id/divider2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Sound"
+                android:textSize="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+
+
+            <Switch
+                android:id="@+id/idswitch4"
+                android:layout_below="@id/divider2"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick4"
+
+                />
+
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_below="@id/idswitch4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+
+            <TextView
+                android:id="@+id/vibration"
+                android:layout_below="@id/divider3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Vibration"
+                android:textSize="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+
+
+            <Switch
+                android:id="@+id/idswitch5"
+                android:layout_below="@id/divider3"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSwitchClick5"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/pm"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="PRIMARY NOTIFICATION"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="15dp"
+                />
+            <TextView
+                android:id="@+id/cu"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Cricket Updates"
+                android:textSize="15dp"
+                android:paddingTop="2dp"
+                android:layout_below="@id/pm"
+                />
+            <TextView
+                android:id="@+id/ncu"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Notify breaking or interesting stories"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/cu"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/pm"
+                />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_below="@id/ncu"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+            <TextView
+                android:id="@+id/imr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="International Match results"
+                android:textSize="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/divider4"
+                />
+            <TextView
+                android:id="@+id/nimr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Notify the result after match"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/imr"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/divider4"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_below="@id/nimr"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+            <TextView
+                android:id="@+id/timr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="T20 league match results"
+                android:textSize="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/divider5"
+                />
+            <TextView
+                android:id="@+id/ntimr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Notify the result after match"
+                android:textSize="12dp"
+                android:paddingTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/timr"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/divider5"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                />
+
+            <TextView
+                android:id="@+id/om"
+                android:layout_below="@id/checkbox3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="OPT-IN NOTIFICATION"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="25dp"
+                />
+
+            <TextView
+                android:id="@+id/mat"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Matches"
+                android:textSize="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/om"
+                />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_below="@id/mat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+            <TextView
+                android:id="@+id/series"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Series"
+                android:textSize="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/mat"
+                />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_below="@id/series"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wblack"
+                />
+
+            <TextView
+                android:id="@+id/teams"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Teams"
+                android:textSize="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/divider7"
+                />
+
+
+            <TextView
+                android:id="@+id/space"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="        "
+                android:textSize="30dp"
+                android:paddingTop="10dp"
+                android:layout_below="@id/divider7"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

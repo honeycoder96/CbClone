@@ -1,6 +1,8 @@
 package me.honeysharma.cbclone;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager,mViewPager1;
     private CardPagerAdapter mCardAdapter;
     private CardVadaptor mCardAdapter1;
+    private BottomNavigationView bottomNavigationView;
 
     private ListView lv,lv1;
     String[][] news={{"New Coach","News 1 comes here","News 3 comes here","News 3 comes here"},
@@ -61,6 +64,31 @@ public class MainActivity extends AppCompatActivity {
         lv1=(ListView)findViewById(R.id.idListView1);
         NewsAdapter adapter1=new NewsAdapter(getApplicationContext(),news1,heading,img);
         lv1.setAdapter(adapter1);
+
+
+        //bottomnavigationview
+
+        bottomNavigationView=(BottomNavigationView)findViewById(R.id.navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.home:
+                        break;
+                    case R.id.matches:
+                        break;
+                    case R.id.news:
+                        break;
+                    case R.id.videos:
+                        break;
+                    case R.id.more:
+                        break;
+
+                }
+                return true;
+            }
+        });
     }
 
     @Override

@@ -1,5 +1,7 @@
 package me.honeysharma.cbclone;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -15,8 +17,10 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     private List<CardView> mViews;
     private List<CardItem> mData;
     private float mBaseElevation;
+    private Context context;
 
-    public CardPagerAdapter() {
+    public CardPagerAdapter(Context context) {
+        this.context=context;
         mData = new ArrayList<>();
         mViews = new ArrayList<>();
     }
@@ -82,6 +86,15 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
         score1.setText(item.getScore1());
         score1.setText(item.getScore1());
         winnerTextView.setText(item.getText());
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tabbedActivity=new Intent(v.getContext(),TabbedActivity.class);
+                tabbedActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(tabbedActivity);
+            }
+        });
     }
 
 }

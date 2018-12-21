@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //for score
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        mCardAdapter = new CardPagerAdapter();
+        mCardAdapter = new CardPagerAdapter(getApplicationContext());
         mCardAdapter.addCardItem(new CardItem("3rd Match . Big Bash League 2018-19",
                 "Melbourn Stars need 33 runs in 6 overs",
                 "SYT","MLS","181-5(20)","61-5(7.1)"));
@@ -109,12 +109,20 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         break;
                     case R.id.matches:
+                        Intent tabbedActivity=new Intent(getApplicationContext(),TabbedActivity.class);
+                        startActivity(tabbedActivity);
                         break;
                     case R.id.news:
+                        Intent tabbedActivity1=new Intent(getApplicationContext(),TabbedActivity.class);
+                        startActivity(tabbedActivity1);
                         break;
                     case R.id.videos:
+                        Intent tabbedActivity2=new Intent(getApplicationContext(),TabbedActivity.class);
+                        startActivity(tabbedActivity2);
                         break;
                     case R.id.more:
+                        Intent tabbedActivity3=new Intent(getApplicationContext(),TabbedActivity.class);
+                        startActivity(tabbedActivity3);
                         break;
 
                 }

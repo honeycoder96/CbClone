@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/background_light"
+    android:paddingTop="5dp"
     >
 
     <TextView
@@ -13,7 +14,8 @@
         android:layout_width="wrap_content"
         android:text="New Heading"
         android:textStyle="italic|bold"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="5dp"
+
         android:paddingLeft="5dp"
         />
 
@@ -32,6 +34,7 @@
         android:layout_width="wrap_content"
         android:text="New Heading"
         android:textStyle="bold"
+        android:paddingLeft="5dp"
         />
 
 
@@ -40,36 +43,7 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#c0c0c0"
-        />
-    <TextView
-        android:id="@+id/news2"
-        android:layout_below="@id/news1"
-        android:layout_height="25dp"
-        android:layout_width="wrap_content"
-        android:text="New Heading"
-        android:textStyle="bold"
+        android:paddingBottom="10dp"
         />
 
-
-    <View
-        android:layout_below="@id/news2"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"
-        />
-    <TextView
-        android:id="@+id/news3"
-        android:layout_below="@id/news2"
-        android:layout_height="25dp"
-        android:layout_width="wrap_content"
-        android:text="New Heading"
-        android:textStyle="bold"
-        />
-
-    <View
-        android:layout_below="@id/news3"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"
-        />
 </RelativeLayout>

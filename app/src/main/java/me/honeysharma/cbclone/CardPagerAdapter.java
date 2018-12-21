@@ -70,9 +70,18 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
 
     private void bind(CardItem item, View view) {
         TextView titleTextView = (TextView) view.findViewById(R.id.titleTextView);
-        TextView contentTextView = (TextView) view.findViewById(R.id.contentTextView);
+        TextView winnerTextView = (TextView) view.findViewById(R.id.contentTextView);
+        TextView team1=(TextView) view.findViewById(R.id.team1);
+        TextView team2=(TextView) view.findViewById(R.id.team2);
+        TextView score1=(TextView) view.findViewById(R.id.score1);
+        TextView score2=(TextView) view.findViewById(R.id.score2);
+
         titleTextView.setText(item.getTitle());
-        contentTextView.setText(item.getText());
+        team1.setText(item.getTeam1());
+        team2.setText(item.getTeam2());
+        score1.setText(item.getScore1());
+        score1.setText(item.getScore1());
+        winnerTextView.setText(item.getText());
     }
 
 }

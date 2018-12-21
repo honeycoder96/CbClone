@@ -82,7 +82,7 @@ public class CardVpagerAdapter extends PagerAdapter implements CardVadaptor {
         videoView.requestFocus();
         //videoView.stopPlayback();
         //videoView.suspend();
-        videoView.start();
+        videoView.pause();
 
         TextView contentTitle = (TextView) view.findViewById(R.id.titleText);
         contentTitle.setText(item.getTitle());

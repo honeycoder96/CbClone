@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -79,12 +80,13 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
         TextView team2=(TextView) view.findViewById(R.id.team2);
         TextView score1=(TextView) view.findViewById(R.id.score1);
         TextView score2=(TextView) view.findViewById(R.id.score2);
+        RelativeLayout schedule=(RelativeLayout)view.findViewById(R.id.schedule);
 
         titleTextView.setText(item.getTitle());
         team1.setText(item.getTeam1());
         team2.setText(item.getTeam2());
         score1.setText(item.getScore1());
-        score1.setText(item.getScore1());
+        score2.setText(item.getScore1());
         winnerTextView.setText(item.getText());
 
         view.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +95,15 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
                 Intent tabbedActivity=new Intent(v.getContext(),TabbedActivity.class);
                 tabbedActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(tabbedActivity);
+            }
+        });
+
+        schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent scheduleIntent=new Intent(v.getContext(),ScheduleActivity.class);
+                scheduleIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(scheduleIntent);
             }
         });
     }

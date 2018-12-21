@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         mCardAdapter1 = new CardVpagerAdapter();
         ((CardVpagerAdapter) mCardAdapter1).addCardItem1(new CardVitem("https://www.demonuts.com/Demonuts/smallvideo.mp4","Kings XI Punjab spend big bucks to rope in Varun Chakravarthy"));
         ((CardVpagerAdapter) mCardAdapter1).addCardItem1(new CardVitem("https://www.demonuts.com/Demonuts/smallvideo.mp4","IPL 2019 Auction Squad Review: Chennai Super Kings"));
+        ((CardVpagerAdapter) mCardAdapter1).addCardItem1(new CardVitem("https://www.demonuts.com/Demonuts/smallvideo.mp4","Kings XI Punjab spend big bucks to rope in Varun Chakravarthy"));
+        ((CardVpagerAdapter) mCardAdapter1).addCardItem1(new CardVitem("https://www.demonuts.com/Demonuts/smallvideo.mp4","IPL 2019 Auction Squad Review: Chennai Super Kings"));
 
         mViewPager1.setAdapter((PagerAdapter) mCardAdapter1);
         mViewPager1.setOffscreenPageLimit(3);

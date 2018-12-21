@@ -115,12 +115,14 @@
 
         </LinearLayout>
         <RelativeLayout
+            android:id="@+id/schedule"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:paddingTop="10dp"
             android:layout_gravity="bottom"
             >
         <TextView
+            android:id="@+id/schedule1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/bwhite"

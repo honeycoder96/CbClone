@@ -73,12 +73,16 @@ public class CardVpagerAdapter extends PagerAdapter implements CardVadaptor {
 
     private void bind(CardVitem item, View view) {
         VideoView videoView = (VideoView) view.findViewById(R.id.videoView);
+
+        MediaController mediaController= new MediaController(view.getContext());
+        mediaController.setAnchorView(videoView);
+
+        videoView.setMediaController(mediaController);
         videoView.setVideoURI(Uri.parse(item.getUrl()));
-        videoView.setMediaController(new MediaController(view.getContext()));
-        //videoView.requestFocus();
-        videoView.stopPlayback();
-        videoView.suspend();
-        //videoView.start();
+        videoView.requestFocus();
+        //videoView.stopPlayback();
+        //videoView.suspend();
+        videoView.start();
 
         TextView contentTitle = (TextView) view.findViewById(R.id.titleText);
         contentTitle.setText(item.getTitle());

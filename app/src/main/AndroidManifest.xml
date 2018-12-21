@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Settings"
             android:label="Settings"
@@ -26,9 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TabbedActivity"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".TabbedActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".ScheduleActivity"
+            android:label="Schedule"
+            android:parentActivityName=".MainActivity"
+            ></activity>
     </application>
 
 </manifest>
